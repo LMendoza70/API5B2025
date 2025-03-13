@@ -17,8 +17,8 @@ app.get('/',(req,res)=>{
   res.send('Hola 5B...');
 })
 //agregamos el endtpoint de la ruta usuarios 
-app.use(userRutes);
-app.use(productoRutes);
+app.use(rutauser);
+app.use(rutaproducto);
 
 
 //creamos el listener del puerto

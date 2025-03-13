@@ -1,6 +1,6 @@
 const mongosse = require('mongoose');
 
-const productoschema=new mongoose.Schema({
+const productoschema= new mongosse.Schema({
     categoria:{
         type:String,
         require:true,
@@ -15,4 +15,4 @@ const productoschema=new mongoose.Schema({
     }
 })
 
-module.exports=mongoose.model('producto5b',productoschema);
+module.exports=mongosse.model('producto5b',productoschema);
