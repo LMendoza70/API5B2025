@@ -17,6 +17,7 @@ app.get('/',(req,res)=>{
 //agregamos el endtpoint de la ruta usuarios 
 app.use(userRutes);
 
+
 //creamos el listener del puerto
 app.listen(port,()=>{
   console.log('La app esta corriendo en el puerto '+port+'...');
