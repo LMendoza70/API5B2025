@@ -2,6 +2,8 @@ require('dotenv').config();
 const express=require('express');
 const mongoose=require('mongoose');
 const userRutes=require('./routes/users5b');
+const productoRutes=require('./routes/productos');
+
 
 //declaramos nuestra variable app para manejar express
 const app=express();
@@ -16,6 +18,7 @@ app.get('/',(req,res)=>{
 })
 //agregamos el endtpoint de la ruta usuarios 
 app.use(userRutes);
+app.use(productoRutes);
 
 
 //creamos el listener del puerto
