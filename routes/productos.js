@@ -1,9 +1,9 @@
 const express=require('express');
-const ruta=express.Router();
+const rutaproducto=express.Router();
 const producto=require('../models/producto');
 
 //primer ruta para obtener el listado de usuarios
-ruta.get('/api/productos', async (req,res)=>{
+rutaproducto.get('/api/productos', async (req,res)=>{
     try{
         const lista=await producto.find();
         res.json(lista);
@@ -14,7 +14,7 @@ ruta.get('/api/productos', async (req,res)=>{
 
 //segunda ruta para insertar un usuario
 
-ruta.post('/api/productos', async (req,res)=>{
+rutaproducto.post('/api/productos', async (req,res)=>{
     const product=new producto({
         name:req.body.name,
         categoria:req.body.categoria,
@@ -29,4 +29,4 @@ ruta.post('/api/productos', async (req,res)=>{
 });
 
 //exportamos la ruta
-module.exports=ruta;
+module.exports=rutaproducto;

@@ -1,9 +1,9 @@
 const express=require('express');
-const ruta=express.Router();
+const rutauser=express.Router();
 const user=require('../models/user5B');
 
 //primer ruta para obtener el listado de usuarios
-ruta.get('/api/users', async (req,res)=>{
+rutauser.get('/api/users', async (req,res)=>{
     try{
         const lista=await user.find();
         res.json(lista);
@@ -14,7 +14,7 @@ ruta.get('/api/users', async (req,res)=>{
 
 //segunda ruta para insertar un usuario
 
-ruta.post('/api/users', async (req,res)=>{
+rutauser.post('/api/users', async (req,res)=>{
     const usuario=new user({
         name:req.body.name,
         email:req.body.email,
@@ -30,4 +30,4 @@ ruta.post('/api/users', async (req,res)=>{
 });
 
 //exportamos la ruta
-module.exports=ruta;
+module.exports=rutauser;

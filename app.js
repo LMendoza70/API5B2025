@@ -1,8 +1,8 @@
 require('dotenv').config();
 const express=require('express');
 const mongoose=require('mongoose');
-const userRutes=require('./routes/users5b');
-const productoRutes=require('./routes/productos');
+const rutauser=require('./routes/users5b');
+const rutaproducto=require('./routes/productos');
 
 
 //declaramos nuestra variable app para manejar express
